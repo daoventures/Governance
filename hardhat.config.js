@@ -3,6 +3,7 @@ const { solidity } = require("ethereum-waffle");
 require("@nomiclabs/hardhat-waffle");
 require("@nomiclabs/hardhat-truffle5");
 require("@nomiclabs/hardhat-web3");
+require("@nomiclabs/hardhat-etherscan");
 require("hardhat-gas-reporter");
 require('dotenv').config();
 
@@ -58,6 +59,10 @@ module.exports = {
 
   gasReporter: {
     showTimeSpent: true
-  }
+  },
+  etherscan: {
+    apiKey: process.env.ETHERSCAN_API_KEY,
+    // apiKey: process.env.BSCSCAN_API_KEY,
+  },
 };
 
